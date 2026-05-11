@@ -135,3 +135,25 @@ document
 
   }, 500);
 };
+chatInput
+.addEventListener(
+
+  "keydown",
+
+  (e) => {
+
+    if(
+      e.key === "Enter" &&
+      !e.shiftKey
+    ){
+
+      e.preventDefault();
+
+      document
+      .getElementById(
+        "sendBtn"
+      )
+      .click();
+    }
+  }
+);
