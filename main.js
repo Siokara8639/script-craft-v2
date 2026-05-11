@@ -199,5 +199,8 @@ function enableCopyButtons(){
     };
 
     block.prepend(button);
+    hljs.highlightElement(
+  block.querySelector("code")
+);
   });
 }
