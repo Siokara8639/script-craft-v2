@@ -72,3 +72,66 @@ monaco.languages
     }
   }
 );
+const messages =
+document.getElementById(
+  "messages"
+);
+
+const chatInput =
+document.getElementById(
+  "chatInput"
+);
+
+function addMessage(
+  text,
+  type
+){
+
+  const div =
+  document.createElement("div");
+
+  div.style.marginTop =
+  "10px";
+
+  div.style.padding =
+  "10px";
+
+  div.style.borderRadius =
+  "10px";
+
+  div.style.background =
+  type === "user"
+  ? "#333"
+  : "#1b1b1b";
+
+  div.textContent =
+  text;
+
+  messages.appendChild(div);
+
+  messages.scrollTop =
+  messages.scrollHeight;
+}
+
+document
+.getElementById("sendBtn")
+.onclick = () => {
+
+  const text =
+  chatInput.value;
+
+  if(!text) return;
+
+  addMessage(text, "user");
+
+  chatInput.value = "";
+
+  setTimeout(() => {
+
+    addMessage(
+      "AI response...",
+      "ai"
+    );
+
+  }, 500);
+};
