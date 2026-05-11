@@ -29,3 +29,46 @@ require(["vs/editor/editor.main"], () => {
     }
   );
 });
+monaco.languages
+.registerCompletionItemProvider(
+  "lua",
+
+  {
+
+    provideCompletionItems: () => {
+
+      return {
+
+        suggestions: [
+
+          {
+
+            label:
+              "Players",
+
+            kind:
+              monaco.languages
+              .CompletionItemKind.Module,
+
+            insertText:
+              'game:GetService("Players")'
+          },
+
+          {
+
+            label:
+              "TweenService",
+
+            kind:
+              monaco.languages
+              .CompletionItemKind.Module,
+
+            insertText:
+              'game:GetService("TweenService")'
+          }
+
+        ]
+      };
+    }
+  }
+);
