@@ -157,3 +157,47 @@ chatInput
     }
   }
 );
+function enableCopyButtons(){
+
+  document
+  .querySelectorAll("pre")
+  .forEach((block) => {
+
+    if(
+      block.dataset.copyReady
+    ) return;
+
+    block.dataset.copyReady = true;
+
+    const button =
+    document.createElement(
+      "button"
+    );
+
+    button.textContent =
+    "コピー";
+
+    button.style.marginBottom =
+    "5px";
+
+    button.onclick = () => {
+
+      navigator.clipboard
+      .writeText(
+        block.innerText
+      );
+
+      button.textContent =
+      "コピー済み";
+
+      setTimeout(() => {
+
+        button.textContent =
+        "コピー";
+
+      }, 1000);
+    };
+
+    block.prepend(button);
+  });
+}
