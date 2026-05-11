@@ -108,7 +108,7 @@ function addMessage(
   text;
 
   messages.appendChild(div);
-
+enableCopyButtons();
   messages.scrollTop =
   messages.scrollHeight;
 }
