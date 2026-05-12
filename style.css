@@ -48,9 +48,19 @@ body{
 
   display:flex;
 
-  padding:10px;
+  align-items:flex-end;
+
+  padding:15px;
 
   gap:10px;
+
+  border-top:1px solid #333;
+
+  background:#111;
+
+  position:sticky;
+
+  bottom:0;
 }
 
 #chatInput{
@@ -63,11 +73,17 @@ body{
 
   border:none;
 
-  border-radius:10px;
+  border-radius:20px;
 
-  padding:10px;
+  padding:15px;
 
   resize:none;
+
+  min-height:60px;
+
+  max-height:200px;
+
+  font-size:16px;
 }
 
 #sendBtn{
@@ -78,7 +94,11 @@ body{
 
   border:none;
 
-  padding:10px;
+  width:50px;
 
-  border-radius:10px;
+  height:50px;
+
+  border-radius:50%;
+
+  font-size:18px;
 }
