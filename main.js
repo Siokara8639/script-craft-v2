@@ -204,3 +204,19 @@ function enableCopyButtons(){
 );
   });
 }
+
+chatInput
+.addEventListener(
+
+  "input",
+
+  () => {
+
+    chatInput.style.height =
+    "auto";
+
+    chatInput.style.height =
+    chatInput.scrollHeight +
+    "px";
+  }
+);
