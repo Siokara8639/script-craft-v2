@@ -42,6 +42,10 @@ body{
   padding:10px;
 
   color:white;
+  
+  display:flex;
+
+flex-direction:column;
 }
 
 #chatBottom{
