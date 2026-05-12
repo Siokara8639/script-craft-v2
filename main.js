@@ -299,7 +299,14 @@ function addMessage(
   type === "user"
   ? "#333"
   : "#1b1b1b";
+div.style.maxWidth =
+"85%";
 
+div.style.alignSelf =
+
+type === "user"
+? "flex-end"
+: "flex-start";
   div.style.color =
   "white";
 
