@@ -366,3 +366,17 @@ chatInput
     }
   }
 );
+
+const backBtn =
+document.getElementById(
+  "backBtn"
+);
+
+backBtn.onclick = () => {
+
+  settingsPage.style.display =
+  "none";
+
+  container.style.display =
+  "flex";
+};
