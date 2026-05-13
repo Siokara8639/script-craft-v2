@@ -262,3 +262,18 @@ flex-direction:column;
 
   border-radius:10px;
 }
+
+#backBtn{
+
+  background:#222;
+
+  color:white;
+
+  border:none;
+
+  padding:10px 15px;
+
+  border-radius:10px;
+
+  margin-bottom:20px;
+}
