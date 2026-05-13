@@ -222,21 +222,23 @@ document.getElementById(
   "settingsBtn"
 );
 
-const settingsPanel =
+const container =
 document.getElementById(
-  "settingsPanel"
+  "container"
+);
+
+const settingsPage =
+document.getElementById(
+  "settingsPage"
 );
 
 settingsBtn.onclick = () => {
 
-  settingsPanel.style.display =
+  container.style.display =
+  "none";
 
-  settingsPanel.style.display ===
-  "block"
-
-  ? "none"
-
-  : "block";
+  settingsPage.style.display =
+  "block";
 };
 
 const settingsBtn =
